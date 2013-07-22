@@ -1,4 +1,3 @@
-basic-scopes
-============
+## basic-scopes [![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
 
-Basic ActiveRecord scopes.
+ActiveRecord basic scopes.
