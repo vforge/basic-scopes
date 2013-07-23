@@ -41,7 +41,7 @@ module BasicScopes
     end
 
     def by_updated_at_reversed
-      self.order("#{self.table_name}.updated_at ASC") }
+      self.order("#{self.table_name}.updated_at ASC")
     end
 
   end
