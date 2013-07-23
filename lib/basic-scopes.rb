@@ -7,42 +7,16 @@ module BasicScopes
   extend ActiveSupport::Concern
 
   included do
-    scope :except_ids, ->(ids) do
-      where("#{self.table_name}.id NOT IN (?)", ids)
-    end
+    scope :except_ids, ->(ids) { where("#{self.table_name}.id NOT IN (?)", ids) }
+    scope :filter_ids, ->(ids) { where("#{self.table_name}.id IN (?)", ids) }
+    scope :filter_last_updated, ->(time) { where("#{self.table_name}.updated_at > ?", time.ago) }
 
-    scope :filter_ids, ->(ids) do
-      where("#{self.table_name}.id IN (?)", ids)
-    end
-
-    scope :filter_last_updated, ->(time) do
-      where("#{self.table_name}.updated_at > ?", time.ago)
-    end
-
-
-    scope: by_id, -> do
-      order("#{self.table_name}.id DESC")
-    end
-
-    scope: by_id_reversed, -> do
-      order("#{self.table_name}.id ASC")
-    end
-
-    scope: by_created_at, -> do
-      order("#{self.table_name}.created_at DESC")
-    end
-
-    scope: by_created_at_reversed, -> do
-      order("#{self.table_name}.created_at ASC")
-    end
-
-    scope: by_updated_at, -> do
-      order("#{self.table_name}.updated_at DESC")
-    end
-
-    scope: by_updated_at_reversed, -> do
-      order("#{self.table_name}.updated_at ASC")
-    end
+    scope :by_id,                   ->{ order("#{self.table_name}.id DESC") }
+    scope :by_id_reversed,          ->{ order("#{self.table_name}.id ASC") }
+    scope :by_created_at,           ->{ order("#{self.table_name}.created_at DESC") }
+    scope :by_created_at_reversed,  ->{ order("#{self.table_name}.created_at ASC") }
+    scope :by_updated_at,           ->{ order("#{self.table_name}.updated_at DESC") }
+    scope :by_updated_at_reversed,  ->{ order("#{self.table_name}.updated_at ASC") }
   end
 
   module ClassMethods
