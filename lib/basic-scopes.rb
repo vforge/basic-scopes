@@ -21,23 +21,23 @@ module BasicScopes
 
 
     def by_id
-      self.order("#{self.table_name}.id DESC") }
+      self.order("#{self.table_name}.id DESC")
     end
 
     def by_id_reversed
-      self.order("#{self.table_name}.id ASC") }
+      self.order("#{self.table_name}.id ASC")
     end
 
     def by_created_at
-      self.order("#{self.table_name}.created_at DESC") }
+      self.order("#{self.table_name}.created_at DESC")
     end
 
     def by_created_at_reversed
-      self.order("#{self.table_name}.created_at ASC") }
+      self.order("#{self.table_name}.created_at ASC")
     end
 
     def by_updated_at
-      self.order("#{self.table_name}.updated_at DESC") }
+      self.order("#{self.table_name}.updated_at DESC")
     end
 
     def by_updated_at_reversed do
