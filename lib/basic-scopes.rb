@@ -1,6 +1,6 @@
 require "basic-scopes/version"
 
-require "active_record" unless defined?(ActiveRecord)
+require "active_record"  unless defined?(ActiveRecord)
 require "active_support" unless defined?(ActiveSupport)
 
 module BasicScopes
@@ -16,8 +16,12 @@ module BasicScopes
         self.where("#{self.table_name}.id IN (?)", ids)
       end
 
-      def filter_last_updated(time)
+      def filter_updated_since(time)
         self.where("#{self.table_name}.updated_at > ?", time.ago)
+      end
+
+      def filter_updated_till(time)
+        self.where("#{self.table_name}.updated_at < ?", time.ago)
       end
 
 

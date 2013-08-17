@@ -9,7 +9,8 @@ You can use basic-scopes just as normal ActiveRecord methods.
 ### Filtering
 * `except_ids(ids)` - all records without matching `ID` field
 * `filter_ids(ids)` - all recorth with matching `ID` field
-* `filter_last_updated(time)` - all records that have `UPDATED_AT` field greater than `time`
+* `filter_updated_since(time)` - all records that have `UPDATED_AT` field greater than `time`
+* `filter_updated_till(time)` - all records that have `UPDATED_AT` field lesser than `time`
 
 
 **NOTE**: `ids` param can be single `ID` or Array of `ID`s
