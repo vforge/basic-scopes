@@ -11,6 +11,8 @@ You can use basic-scopes just as normal ActiveRecord methods.
 * `filter_ids(ids)` - all recorth with matching `ID` field
 * `filter_updated_since(time)` - all records that have `UPDATED_AT` field greater than `time`
 * `filter_updated_till(time)` - all records that have `UPDATED_AT` field lesser than `time`
+* `filter_created_since(time)` - all records that have `CREATED_AT` field greater than `time`
+* `filter_created_till(time)` - all records that have `CREATED_AT` field lesser than `time`
 
 
 **NOTE**: `ids` param can be single `ID` or Array of `ID`s

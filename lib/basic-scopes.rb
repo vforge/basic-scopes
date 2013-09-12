@@ -24,6 +24,14 @@ module BasicScopes
         self.where("#{self.table_name}.updated_at < ?", time.ago)
       end
 
+      def filter_created_since(time)
+        self.where("#{self.table_name}.created_at > ?", time.ago)
+      end
+
+      def filter_created_till(time)
+        self.where("#{self.table_name}.created_at < ?", time.ago)
+      end
+
 
       def by_id
         self.order("#{self.table_name}.id DESC")
