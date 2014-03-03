@@ -1,5 +1,6 @@
-## basic-scopes [![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
-
+## basic-scopes
+[![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
+[![Dependency Status](https://gemnasium.com/vforge/issues-to-care.png)](https://gemnasium.com/vforge/issues-to-care)
 ActiveRecord basic scopes.
 
 ## Usage
