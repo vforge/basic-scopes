@@ -30,3 +30,7 @@ You can use basic-scopes just as normal ActiveRecord methods.
 ## Example
 
 `User.filter_last_update(1.day).by_updated_at` - All users updated in the last one day, ordered by time
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vforge/basic-scopes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
