@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
 [![Dependency Status](https://gemnasium.com/vforge/basic-scopes.png)](https://gemnasium.com/vforge/basic-scopes)
 [![Code Climate](https://codeclimate.com/github/vforge/basic-scopes.png)](https://codeclimate.com/github/vforge/basic-scopes)
+[![Gem Version](https://badge.fury.io/rb/basic-scopes.png)](http://badge.fury.io/rb/basic-scopes)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vforge/basic-scopes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ActiveRecord basic scopes.
 
@@ -33,5 +35,4 @@ You can use basic-scopes just as normal ActiveRecord methods.
 `User.filter_last_update(1.day).by_updated_at` - All users updated in the last one day, ordered by time
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vforge/basic-scopes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
