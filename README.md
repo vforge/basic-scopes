@@ -1,8 +1,8 @@
 ## basic-scopes
+[![Gem Version](https://badge.fury.io/rb/basic-scopes.png)](http://badge.fury.io/rb/basic-scopes)
 [![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
 [![Dependency Status](https://gemnasium.com/vforge/basic-scopes.png)](https://gemnasium.com/vforge/basic-scopes)
 [![Code Climate](https://codeclimate.com/github/vforge/basic-scopes.png)](https://codeclimate.com/github/vforge/basic-scopes)
-[![Gem Version](https://badge.fury.io/rb/basic-scopes.png)](http://badge.fury.io/rb/basic-scopes)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vforge/basic-scopes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ActiveRecord basic scopes.
@@ -12,6 +12,8 @@ ActiveRecord basic scopes.
 You can use basic-scopes just as normal ActiveRecord methods.
 
 ### Filtering
+* `except_id(id)` - all records without matching `ID` field
+* `filter_id(id)` - all recorth with matching `ID` field
 * `except_ids(ids)` - all records without matching `ID` field
 * `filter_ids(ids)` - all recorth with matching `ID` field
 * `filter_updated_since(time)` - all records that have `UPDATED_AT` field greater than `time`
@@ -20,7 +22,8 @@ You can use basic-scopes just as normal ActiveRecord methods.
 * `filter_created_till(time)` - all records that have `CREATED_AT` field lesser than `time`
 
 
-**NOTE**: `ids` param can be single `ID` or Array of `ID`s
+**NOTE**: `ids` param is an Array of `ID`s; `id` is single value
+
 
 ### Sorting / OrderBy
 * `by_id` - order by `ID` descending
@@ -30,9 +33,10 @@ You can use basic-scopes just as normal ActiveRecord methods.
 * `by_updated_at` - order by `UPDATED_AT` descending
 * `by_updated_at_reversed` - order by `UPDATED_AT` ascending
 
-## Example
+## Examples
 
-`User.filter_last_update(1.day).by_updated_at` - All users updated in the last one day, ordered by time
+`Account.except_id(1)` - All Accounts except ID == 1.
+`User.filter_updated_since(1.day).by_updated_at` - All Users updated in the last one day, ordered by time
 
 
 

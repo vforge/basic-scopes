@@ -8,6 +8,14 @@ module BasicScopes
 
   included do
     class << self
+      def except_id(id)
+        self.where("#{self.table_name}.id <> ?", id)
+      end
+
+      def filter_id(id)
+        self.where("#{self.table_name}.id = ?", id)
+      end
+	  
       def except_ids(ids)
         self.where("#{self.table_name}.id NOT IN (?)", ids)
       end
