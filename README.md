@@ -1,9 +1,8 @@
 ## basic-scopes
-[![Gem Version](https://badge.fury.io/rb/basic-scopes.png)](http://badge.fury.io/rb/basic-scopes)
-[![Build Status](https://travis-ci.org/vforge/basic-scopes.png)](https://travis-ci.org/vforge/basic-scopes)
-[![Dependency Status](https://gemnasium.com/vforge/basic-scopes.png)](https://gemnasium.com/vforge/basic-scopes)
-[![Code Climate](https://codeclimate.com/github/vforge/basic-scopes.png)](https://codeclimate.com/github/vforge/basic-scopes)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vforge/basic-scopes/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Gem Version](https://badge.fury.io/rb/basic-scopes.svg)](http://badge.fury.io/rb/basic-scopes)
+[![Build Status](https://travis-ci.org/vforge/basic-scopes.svg)](https://travis-ci.org/vforge/basic-scopes)
+[![Dependency Status](https://gemnasium.com/vforge/basic-scopes.svg)](https://gemnasium.com/vforge/basic-scopes)
+[![Code Climate](https://codeclimate.com/github/vforge/basic-scopes/badges/gpa.svg)](https://codeclimate.com/github/vforge/basic-scopes)
 
 ActiveRecord basic scopes.
 
@@ -13,9 +12,9 @@ You can use basic-scopes just as normal ActiveRecord methods.
 
 ### Filtering
 * `except_id(id)` - all records without matching `ID` field
-* `filter_id(id)` - all recorth with matching `ID` field
+* `filter_id(id)` - all records with matching `ID` field
 * `except_ids(ids)` - all records without matching `ID` field
-* `filter_ids(ids)` - all recorth with matching `ID` field
+* `filter_ids(ids)` - all records with matching `ID` field
 * `filter_updated_since(time)` - all records that have `UPDATED_AT` field greater than `time`
 * `filter_updated_till(time)` - all records that have `UPDATED_AT` field lesser than `time`
 * `filter_created_since(time)` - all records that have `CREATED_AT` field greater than `time`
